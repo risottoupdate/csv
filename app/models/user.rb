@@ -7,6 +7,7 @@ class User < ApplicationRecord
 
     puts "path: #{path}"
   	list = []
+
   	CSV.foreach(path, headers: true) do |row|
 	  	list << {
 	  		Address_id: row["Address_id"],
