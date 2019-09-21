@@ -1,14 +1,13 @@
 class User < ApplicationRecord
 	# CSVデータのパスを引数として受け取り、インポート処理を実行
-  def self.import
+  def self.import(file)
 
   	# CSVを格納しているディレクトリをpathに保存
-  	path = File.join Rails.root, "db/csv_data/human2.csv"
+  	# path = File.join Rails.root, "db/csv_data/human2.csv"
 
-    puts "path: #{path}"
   	list = []
 
-  	CSV.foreach(path, headers: true) do |row|
+  	CSV.foreach(file.path, headers: true) do |row|
 	  	list << {
 	  		Address_id: row["Address_id"],
 	  		Address: row["Address"],
