@@ -1,24 +1,9 @@
-# README
+# 開発内容
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+動画教材のCSVインポートに準拠したアプリを制作しました
+listに格納した後に、テーブルクリエイトする様になっております。
 
-Things you may want to cover:
+また、CSVファイルをインポートするViewファイルを作成しました。
+View画面上でCSVファイルを指定すれば、対象のCSVファイルをインポートして表示する様にしております。
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+ルーティングにはresourcesを使用しております。
