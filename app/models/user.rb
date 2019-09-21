@@ -3,7 +3,7 @@ class User < ApplicationRecord
   def self.import
 
   	# CSVを格納しているディレクトリをpathに保存
-  	path = File.join Rails.root, "db/csv_data/human.csv"
+  	path = File.join Rails.root, "db/csv_data/human2.csv"
 
     puts "path: #{path}"
   	list = []
