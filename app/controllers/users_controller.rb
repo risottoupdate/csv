@@ -5,9 +5,11 @@ class UsersController < ApplicationController
 	end
 
 	def import
-		# fileはtmpに自動で一時保存される
+		# User.importを実行
     User.import(params[:file])
-    redirect_to "users/index"
+    
+    # indexにリダイレクト
+    redirect_to "/users"
 	end
 
 end
