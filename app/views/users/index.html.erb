@@ -1,0 +1,29 @@
+
+
+<h1>CSVインポート</h1>
+
+<%= form_tag import_users_path, multipart: true do %>
+  <%= file_field_tag :file %>
+  <%= submit_tag "インポート" %>
+<% end %>
+
+<table>
+  <thead>
+    <tr>
+      <th>年齢</th>
+      <th>西暦</th>
+      <th>人口</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @users.each do |user| %>
+      <tr>
+        <td><%= user.Age %></td>
+        <td><%= user.Year %></td>
+        <td><%= user.Human %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
